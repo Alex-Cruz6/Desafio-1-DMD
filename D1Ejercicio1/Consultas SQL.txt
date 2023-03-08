@@ -4,3 +4,19 @@ SELECT 'SpaEscalon' AS Fuente, sexo, Edad FROM SpaEscalon.dbo.SpaEscalon_i201910
 UNION
 SELECT 'SpaSantaTecla' AS Fuente, sexo, Edad FROM SpaSantaTecla.dbo.SpaSantaTecla_m20191007
 ORDER BY Sexo
+
+
+SELECT 'SpaCentro' AS Fuente, COUNT(PromVisit) FROM SpaCentro.dbo.SpaCentro_m20191007
+UNION
+SELECT 'SpaEscalon' AS Fuente, COUNT(PromVisit) FROM SpaEscalon.dbo.SpaEscalon_i20191007
+UNION
+SELECT 'SpaSantaTecla' AS Fuente, COUNT(PromVisit) FROM SpaSantaTecla.dbo.SpaSantaTecla_m20191007
+WHERE sexo = 0
+
+
+SELECT 'SpaCentro' AS Fuente, COUNT(PromVisit) FROM SpaCentro.dbo.SpaCentro_m20191007
+UNION
+SELECT 'SpaEscalon' AS Fuente, COUNT(PromVisit) FROM SpaEscalon.dbo.SpaEscalon_i20191007
+UNION
+SELECT 'SpaSantaTecla' AS Fuente, COUNT(PromVisit) FROM SpaSantaTecla.dbo.SpaSantaTecla_m20191007
+WHERE sexo = 1
