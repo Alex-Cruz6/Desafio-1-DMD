@@ -1,0 +1,6 @@
+SELECT 'SpaCentro' AS Fuente, sexo, Edad FROM SpaCentro.dbo.SpaCentro_m20191007
+UNION
+SELECT 'SpaEscalon' AS Fuente, sexo, Edad FROM SpaEscalon.dbo.SpaEscalon_i20191007
+UNION
+SELECT 'SpaSantaTecla' AS Fuente, sexo, Edad FROM SpaSantaTecla.dbo.SpaSantaTecla_m20191007
+ORDER BY Sexo
